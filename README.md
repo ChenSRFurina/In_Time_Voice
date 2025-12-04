@@ -29,7 +29,7 @@
 pip install requests sounddevice soundfile pyaudio python-dotenv dashscope
 ```
 
-3. 在项目根目录创建 `.env`（不会提交到 Git）：
+3. 在项目根目录创建 `.env`：
 
 ```env
 DASHSCOPE_API_KEY=你的_dashscope_key
