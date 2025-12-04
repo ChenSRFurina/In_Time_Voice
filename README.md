@@ -18,23 +18,25 @@
 - `voice_recoder.py`：一次性录音工具（非流式场景）
 - `voice_clone.py`：封装 SiliconFlow 语音克隆与 TTS 调用
 
-### 环境准备
+### 环境依赖
 
-1. 建议使用独立虚拟环境（已在项目中自带一个 `intime_voice/` 目录，仅供本地使用，已通过 `.gitignore` 排除）。
-2. 至少需要的依赖（参考）：
+1. Windows 上需要安装并正确配置：
+   - **VB-Audio Virtual Cable (VB-CABLE)**：用于将扬声器输出“接”到程序输入，以及将程序输出“接”到虚拟麦克风。
+   - **VoiceMeeter**（推荐）：用于灵活路由真实麦克风到虚拟输出（`VoiceMeeter Output`），本项目默认将其作为麦克风输入设备。
+2. Python 依赖（参考）：
 
 ```bash
 pip install requests sounddevice soundfile pyaudio python-dotenv dashscope
 ```
 
-3. 在项目根目录创建 `.env`：
+3. 在项目根目录创建 `.env`（不会提交到 Git）：
 
 ```env
 DASHSCOPE_API_KEY=你的_dashscope_key
 SILICONFLOW_API_KEY=你的_siliconflow_key
 ```
 
-### 常用命令
+### 运行方式
 
 - 扬声器 + 麦克风双翻译（推荐）：
 
@@ -53,18 +55,3 @@ python main.py --mode online --streaming
 ```bash
 python main.py --mode local --streaming --virtual-mic
 ```
-
-### 推送到 GitHub
-
-在 `D:\code\DSAA2012\intime_voice` 目录下执行一次：
-
-```bash
-git init
-git remote add origin https://github.com/ChenSRFurina/In_Time_Voice.git
-git add .
-git commit -m "Initial commit: core translation and voice clone"
-git branch -M main
-git push -u origin main
-```
-
-
