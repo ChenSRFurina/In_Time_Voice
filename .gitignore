@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+# 虚拟环境 / 本地依赖
+intime_voice/
+venv/
+.venv/
+env/
+
+# 运行时生成的音频与缓存
+origin_audio/
+translated_audio/
+test_data/
+voice_clone_config.json
+
+# 环境与敏感配置
+.env
+
+# 编辑器 / 系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+
